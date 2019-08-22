@@ -1,0 +1,14 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background-color: #090909;
+  color: #ccc;
+  font-family: 'Montserrat', sans-serif; }
+
+.page2 {
+  width: 0vw;
+  overflow: hidden; }
+
+
+/*# sourceMappingURL=/styles.5c8f3eab.css.map */
