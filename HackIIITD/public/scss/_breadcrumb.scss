@@ -1,0 +1,117 @@
+/* Home Banner Area css
+============================================================================================ */
+
+.banner_area {
+    background: linear-gradient(0deg, rgba(4, 10, 31, 0.5), rgba(4, 10, 31, 0.5)), url(../img/blog/blog-details-bg.jpg) no-repeat center;
+    background-size: cover;
+    min-height: 400px;
+    position: relative;
+    .banner_inner {
+        min-height: 400px;
+        .page_link {
+            i,
+            a {
+                color: #fff;
+            }
+            a {
+                &:hover {
+                    color: $baseColor;
+                }
+            }
+            i {
+                position: relative;
+                top: 2px;
+            }
+        }
+        h2 {
+            font-size: 48px;
+        }
+    }
+}
+
+/* Home Slider Area css
+============================================================================================ */
+
+.home_slider {
+    .swiper-slide {
+        position: relative;
+        .slider_text {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            z-index: 5;
+            opacity: 0;
+            transition: all 4s ease;
+            text-align: center;
+            h1 {
+                text-transform: capitalize;
+                color: #ffffff;
+                font-size: 80px;
+                font-weight: 300;
+                margin-bottom: 30px;
+            }
+            p {
+                color: #ffffff;
+                max-width: 516px;
+                margin: 0 auto;
+                font-size: 14px;
+                margin-bottom: 50px;
+            }
+        }
+        &.swiper-slide-active {
+            .slider_text {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+/* End Home Banner Area css
+============================================================================================ */
+
+// Blog Banner
+.blog_banner {
+    min-height: 660px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    margin-bottom: 0px;
+    .banner_inner {
+        background: #04091e;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        min-height: 660px;
+        z-index: 1;
+        .overlay {
+            background: url(../img/banner/banner-2.jpg) no-repeat scroll center center;
+            opacity: .5;
+            height: 125%;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            z-index: -1;
+        }
+        .blog_b_text {
+            max-width: 700px;
+            margin: auto;
+            color: #fff;
+            h2 {
+                font-size: 60px;
+                font-weight: bold;
+                font-family: $oswald;
+                line-height: 66px;
+                margin-bottom: 15px;
+            }
+            p {
+                font-size: 16px;
+                margin-bottom: 35px;
+            }
+        }
+    }
+}
+
+/* End Home Banner Area css
+============================================================================================ */

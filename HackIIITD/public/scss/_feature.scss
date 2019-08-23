@@ -1,0 +1,293 @@
+.contact_area,
+.testimonial_area,
+.service_area {
+    .left_side {
+        .overlay-bg {
+            background: $black;
+            opacity: .8;
+        }
+    }
+}
+
+/* Start Banner Area css
+============================================================================================ */
+
+.banner-area {
+    &.mt-34 {
+        @media (max-width: 1199px) and (min-width: 320px) {
+            margin-top: 34px;
+        }
+    }
+    .right_side {
+        @media (max-width: 991px) {
+            padding: 50px 40px;
+        }
+        @media (max-width: 575px) {
+            padding: 50px 15px;
+        }
+    }
+}
+
+/* End Banner Area css
+============================================================================================ */
+
+/* About Area css
+============================================================================================ */
+
+.about-area {
+    &.mt-34 {
+        @media (max-width: 1199px) and (min-width: 320px) {
+            margin-top: 34px;
+        }
+    }
+    .right_side {
+        @media (max-width: 991px) {
+            padding: 50px 40px;
+        }
+        @media (max-width: 575px) {
+            padding: 50px 15px;
+        }
+    }
+    .fact_box {
+        @media (max-width: 767px) {
+            margin-top: 30px;
+        }
+        &.mb-30 {
+            @media (max-width: 767px) {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.fact {
+    width: 62%;
+    top: 53%;
+    @media (max-width: 767px) {
+        top: 50%;
+    }
+    .fact_box {
+        background: #ffffff;
+        text-align: center;
+        padding: 50px 20px;
+        border: 1px solid #dddddd;
+        @media (max-width: 575px) {
+            margin-top: 8px;
+        }
+        @media (max-width: 575px) {
+            padding: 12px 40px;
+        }
+        i {
+            font-size: 24px;
+            color: $baseColor;
+            @media (max-width: 575px) {
+                font-size: 16px;
+            }
+        }
+        h2 {
+            margin-top: 30px;
+            font-size: 36px;
+            font-weight: 700;
+            @media (max-width: 575px) {
+                margin-top: 0px;
+                font-size: 18px;
+                margin-bottom: 0;
+            }
+        }
+        p {
+            margin-bottom: 0;
+            @media (max-width: 575px) {
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+/* End About Area css
+============================================================================================ */
+
+/* Start Service Area css
+============================================================================================ */
+
+.service-area {
+    &.mt-34 {
+        @media (max-width: 1199px) and (min-width: 320px) {
+            margin-top: 34px;
+        }
+    }
+    .right_side.vcenter {
+        width: 60%;
+        @media (max-width: 991px) {
+            width: 80%;
+        }
+        @media (max-width: 575px) {
+            width: 100%;
+        }
+    }
+    .right_side {
+        @media (max-width: 991px) {
+            padding: 50px 40px;
+        }
+        @media (max-width: 575px) {
+            padding: 50px 15px;
+        }
+    }
+}
+
+.single-service {
+    background: #f1f9ff;
+    padding: 40px 30px;
+    @include transition();
+    margin-bottom: 30px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+    .thumb {
+        margin-right: 30px;
+        i {
+            font-size: 24px;
+            color: #000000
+        }
+    }
+    h4 {
+        margin-bottom: 25px;
+        font-size: 24px;
+        line-height: 20px;
+        @include transition();
+        @media (max-width: 575px) {
+            line-height: 30px;
+            margin-bottom: 15px;
+        }
+    }
+    &:hover {
+        h4 {
+            color: $baseColor;
+            cursor: pointer;
+        }
+    }
+}
+
+/* End Service Area css
+============================================================================================ */
+
+/* Start Portfolio Area css
+============================================================================================ */
+
+.portfolio-area {
+    &.mt-34 {
+        @media (max-width: 1199px) and (min-width: 320px) {
+            margin-top: 34px;
+        }
+    }
+    .right_side {
+        @media (max-width: 991px) {
+            padding: 50px 40px;
+        }
+        @media (max-width: 575px) {
+            padding: 50px 15px;
+        }
+    }
+}
+
+/* End Portfolio Area css
+============================================================================================ */
+
+/* Start Testimonial Area css
+============================================================================================ */
+
+.testimonials-area {
+    .owl-dots {
+        display: none;
+    }
+    .right_side {
+        @media (max-width: 991px) {
+            padding: 50px 40px 10px;
+        }
+        @media (max-width: 575px) {
+            padding: 50px 15px;
+        }
+    }
+    .owl-thumbs {
+        @media (max-width: 991px) {
+            @include flexbox();
+            @include justify-content(center);
+        }
+    }
+}
+
+.owl-thumb-item {
+    text-align: center;
+    img {
+        border: 5px solid transparent;
+        @include transition();
+        cursor: pointer;
+        margin-bottom: 50px;
+    }
+    &:hover,
+    &.active {
+        img {
+            border: 5px solid $baseColor;
+        }
+    }
+}
+
+.testi-slider {
+    width: 62%;
+    @media (max-width: 575px) {
+        width: 80%;
+    }
+    margin: auto;
+    .testi-item {
+        img {
+            width: auto;
+        }
+    }
+}
+
+.testi-item {
+    h4 {
+        font-size: 21px;
+        font-weight: 700;
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+    img {
+        margin-bottom: 45px !important;
+    }
+    p {
+        max-width: 605px;
+        font-style: italic;
+        &:last-child {
+            font-style: normal;
+        }
+    }
+}
+
+/* End Testimonial Area css
+============================================================================================ */
+
+/* Start Contact Area css
+============================================================================================ */
+
+.contact-area {
+    &.mt-34 {
+        @media (max-width: 1199px) and (min-width: 320px) {
+            margin-top: 34px;
+        }
+    }
+    .right_side {
+        @media (max-width: 991px) {
+            padding: 50px 40px;
+        }
+        @media (max-width: 575px) {
+            width: 100%;
+            padding: 50px 15px;
+        }
+    }
+}
+
+/* End Contact Area css
+============================================================================================ */

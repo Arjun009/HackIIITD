@@ -1,0 +1,255 @@
+.list {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+.row.m0 {
+    margin: 0px;
+}
+
+body {
+    line-height: 26px;
+    font-size: 16px;
+    font-family: $rob;
+    font-weight: 400;
+    color: $pfont;
+    background: #f1f9ff;
+    @include transition();
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $oswald;
+    font-weight: 300;
+    color: $black;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.p_120 {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.pad_top {
+    padding-top: 120px;
+}
+
+.container {
+    >.row {
+        >.col-lg-6,
+        .offset-lg-1.col-lg-4 {
+            padding: 0;
+        }
+    }
+}
+
+.section-gap {
+    padding: 60px 0;
+}
+
+.primary-btn {
+    background: $baseColor;
+    height: 50px;
+    line-height: 46px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 0px;
+    border: 1px solid $baseColor;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    text-transform: capitalize;
+    overflow: hidden;
+    @include transition();
+    &:focus {
+        outline: none;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 0;
+        top: 50%;
+        left: 50%;
+        background: #ffffff;
+        opacity: 0;
+        @include transform(translateX(-50%) translateY(-50%) rotate(45deg));
+        @include transition();
+    }
+    &:hover {
+        background: transparent;
+        color: $black;
+        &:after {
+            height: 200%;
+            opacity: 1;
+            background: $baseColor;
+        }
+    }
+    &.dark {
+        background: $black;
+        color: #ffffff;
+        border: 1px solid $black;
+        &:hover {
+            background: transparent;
+            border: 1px solid $baseColor;
+        }
+    }
+}
+
+.pad_btm {
+    padding-bottom: 120px;
+}
+
+.mt-25 {
+    margin-top: 25px;
+}
+
+.mt--40 {
+    margin-top: -40px;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+.p0 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.left_side {
+    padding: 0;
+}
+
+.right_side {
+    h1 {
+        margin-bottom: 25px;
+        font-size: 60px;
+        @media (max-width: 991px) {
+            font-size: 35px;
+            margin-bottom: 25px;
+        }
+        @media (max-width: 576px) {
+            font-size: 30px;
+        }
+        br {
+            @media (max-width: 991px) {
+                display: none;
+            }
+        }
+    }
+    p {
+        margin: 0;
+        max-width: 450px;
+    }
+    .primary-btn {
+        margin-top: 35px;
+    }
+}
+
+@media(min-width: 1620px) {
+    .box_1620 {
+        max-width: 1650px;
+        margin: auto;
+    }
+}
+
+@media(min-width: 1200px) {
+    .header_area.home_menu {
+        display: none;
+        &+section,
+        &+row,
+        &+div {
+            margin-top: 0px;
+        }
+    }
+}
+
+.opacity-1 {
+    opacity: .1;
+}
+
+.owl-dots {
+    position: absolute;
+    top: 50%;
+    right: -100.8%;
+    @include transform(translateY(-50%));
+    @media (max-width: 1480px) {
+        right: -93.7%;
+    }
+    @media (max-width: 991px) {
+        display: none;
+    }
+    .owl-dot {
+        width: 2px;
+        height: 50px;
+        background: #dddddd !important;
+        @include transition();
+        &.active {
+            width: 5px;
+            background: #000000 !important;
+            position: relative;
+            left: -1px;
+            border-radius: 12px;
+        }
+    }
+}
+
+.vcenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+
+}
+
+.overlay-bg-4 {
+    background: $black;
+    opacity: .4;
+}
+
+.overlay-bg-8 {
+    background: $black;
+    opacity: .8;
+}
+
+@include keyframes(glow) {
+    from {
+        box-shadow: 0 0 5px -5px $baseColor;
+    }
+    to {
+        box-shadow: 0 0 5px 5px $baseColor;
+    }
+}
