@@ -1,2 +1,2 @@
-# HackNSUT
+HackIIITD
 
