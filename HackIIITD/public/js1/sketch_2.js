@@ -12,7 +12,7 @@ var saved = false;
 console.log("opop");
 
 function setup() {
-    createCanvas(640, 480);
+    createCanvas(1000, 1000);
     video = createCapture(VIDEO);
     video.size(width, height);
     frameRate(30);
@@ -28,6 +28,8 @@ function setup() {
     // Hide the video element, and just show the canvas
     video.hide();
 }
+
+
 
 function modelReady() {
     select('#status').html('Model Loaded');

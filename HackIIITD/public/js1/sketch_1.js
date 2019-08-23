@@ -103,7 +103,7 @@ function drawKeyPoints(){
         if (cycle == 5 && saved == false) {
 
             $("#sarthak").fadeOut("slow", () => {
-                $("#sarthak").html(0);
+                $("#sarthak").html(cycle);
                 $("#sarthak").fadeIn();
             });
             //cycle = 0;

@@ -12,7 +12,8 @@ var saved = false;
 console.log("opop");
 
 function setup() {
-    createCanvas(640, 480);
+    console.log(windowWidth+" "+windowHeight)
+    createCanvas(900, 600);
     video = createCapture(VIDEO);
     video.size(width, height);
     frameRate(30);
@@ -29,13 +30,19 @@ function setup() {
     video.hide();
 }
 
+function mousePressed() {
+  if (mouseX > 0 && mouseX < 100 && mouseY > 0 && mouseY < 100) {
+    let fs = fullscreen();
+    fullscreen(!fs);
+  }
+}
+
 function modelReady() {
     select('#status').html('Model Loaded');
 }
 
 function draw() {
     image(video, 0, 0, width, height);
-
     // We can call both functions to draw all keypoints and the skeletons
         drawKeyPoints();
         drawSkeleton();
@@ -86,8 +93,8 @@ function drawKeyPoints() {
                 l1 = true;
                 l2 = false;
                 l3 = false;
-
-                cycle++;
+                if(cycle != 5)
+                    cycle++;
             }
 
         }
@@ -102,7 +109,7 @@ function drawKeyPoints() {
         if (cycle == 5 && saved == false) {
 
             $("#sarthak").fadeOut("slow", () => {
-                $("#sarthak").html(0);
+                $("#sarthak").html(cycle);
                 $("#sarthak").fadeIn();
             });
             //console.log("Im back in 0");
