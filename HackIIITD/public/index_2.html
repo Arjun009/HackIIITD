@@ -81,7 +81,8 @@
                             <h1>
                                 <span id="sarthak">0 </span><br>WRAPS DONE
                             </h1>
-                            <!--                            <a href="courses.html" class="primary-btn">G</a>-->
+                            <a href="#" id="go-to-next" class="primary-btn" style="visibility: hidden;">Congrats!! Your workout regime ends
+                            here. Click here to see how you performed.</a>
                         </div>
                     </div>
                 </div>
@@ -97,6 +98,11 @@
             if (status.innerHTML === "Model Loaded") {
                 document.querySelector('canvas').style.visibility = "visible";
                 document.querySelector('.loader').style.display = "none";
+            }
+            
+            if(counter.innerHTML === "3"){
+                //document.querySelector("#counter").style.display = "none";
+                document.querySelector("#go-to-next").style.visibility = "visible";
             }
         }, 10);
 

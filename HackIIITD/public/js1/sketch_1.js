@@ -43,9 +43,12 @@ function draw() {
     
 }
 
-// A function to draw ellipses over the detected keypoints
-function drawKeyPoints() {
+
+
+function drawKeyPoints(){
+    
     // Loop through all the poses detected
+    console.log("Im in 1");
     for (let i = 0; i < poses.length; i++) {
         // For each pose detected, loop through all the keypoints
         let pose = poses[i].pose;
@@ -60,12 +63,11 @@ function drawKeyPoints() {
             }
         }
     }
-   
-        if (poses.length != 0) {
+ 
+    if (poses.length != 0) {
             l1 = true;
 
-
-            if (abs(poses[0].pose.leftEye.y - poses[0].pose.rightEye.y) < 5 && l1 == true && l4) {
+            if (abs(poses[0].pose.leftShoulder.y - poses[0].pose.leftWrist.y) < 30 && abs(poses[0].pose.rightShoulder.y - poses[0].pose.rightWrist.y) < 30 && l1 == true) {
                 l2 = true;
                 l3 = false;
                 l1 = false;
@@ -73,24 +75,23 @@ function drawKeyPoints() {
 
             }
 
-            if ((15 < poses[0].pose.leftEye.y - poses[0].pose.rightEye.y && poses[0].pose.leftEye.y - poses[0].pose.rightEye.y < 30) && l1 == true) {
+            if (poses[0].pose.leftWrist.y < poses[0].pose.leftEye.y && poses[0].pose.rightWrist.y < poses[0].pose.rightEye.y && l2 == true) {
                 l3 = true;
                 l2 = false;
                 l1 = false;
-                l4 = false;
 
 
             }
-
-            if ((15 < poses[0].pose.rightEye.y - poses[0].pose.leftEye.y && poses[0].pose.rightEye.y - poses[0].pose.leftEye.y < 30) && l3 == true && l4 == false) {
+            if (poses[0].pose.leftWrist.y < (poses[0].pose.leftShoulder.y - 30) && poses[0].pose.rightWrist.y < (poses[0].pose.rightShoulder.y - 30) && l3 == true) {
                 l1 = true;
                 l2 = false;
                 l3 = false;
 
                 cycle++;
             }
-
         }
+
+
         if (cycle != prev) {
             //console.log("cycle: " + cycle);
             // document.getElementById("sarthak").innerHTML=cycle;
@@ -105,14 +106,15 @@ function drawKeyPoints() {
                 $("#sarthak").html(0);
                 $("#sarthak").fadeIn();
             });
-            //console.log("Im back in 0");
+            //cycle = 0;
+            //drawKeyPoints2();
             saved = true;
         }
         prev = cycle;
     
-        //drawKeyPoints1();
+        //drawKeyPoints2();
+    
 }
-
 
 // A function to draw the skeletons
 function drawSkeleton() {

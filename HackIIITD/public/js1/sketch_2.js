@@ -43,8 +43,9 @@ function draw() {
     
 }
 
-// A function to draw ellipses over the detected keypoints
+
 function drawKeyPoints() {
+    
     // Loop through all the poses detected
     for (let i = 0; i < poses.length; i++) {
         // For each pose detected, loop through all the keypoints
@@ -60,37 +61,32 @@ function drawKeyPoints() {
             }
         }
     }
-   
-        if (poses.length != 0) {
+    
+    if (poses.length != 0) {
             l1 = true;
 
 
-            if (abs(poses[0].pose.leftEye.y - poses[0].pose.rightEye.y) < 5 && l1 == true && l4) {
+            if (abs(poses[0].pose.rightEar.y - poses[0].pose.rightShoulder.y) < 10 && l1 == true) {
                 l2 = true;
                 l3 = false;
                 l1 = false;
-                //console.log(poses[0].pose.leftShoulder.y, poses[0].pose.leftWrist.y);
-
             }
 
-            if ((15 < poses[0].pose.leftEye.y - poses[0].pose.rightEye.y && poses[0].pose.leftEye.y - poses[0].pose.rightEye.y < 30) && l1 == true) {
+            if (abs(poses[0].pose.leftAnkle.y - poses[0].pose.leftWrist.y) < 30 && abs(poses[0].pose.rightAnkle.y - poses[0].pose.rightWrist.y) < 30 && l2 == true) {
                 l3 = true;
                 l2 = false;
                 l1 = false;
-                l4 = false;
-
-
             }
 
-            if ((15 < poses[0].pose.rightEye.y - poses[0].pose.leftEye.y && poses[0].pose.rightEye.y - poses[0].pose.leftEye.y < 30) && l3 == true && l4 == false) {
+            if (abs(poses[0].pose.rightEar.y - poses[0].pose.rightShoulder.y) > 25 && l3 == true) {
                 l1 = true;
-                l2 = false;
                 l3 = false;
-
+                l2 = false;
                 cycle++;
             }
-
         }
+
+
         if (cycle != prev) {
             //console.log("cycle: " + cycle);
             // document.getElementById("sarthak").innerHTML=cycle;
@@ -100,19 +96,13 @@ function drawKeyPoints() {
             });
         }
         if (cycle == 5 && saved == false) {
-
-            $("#sarthak").fadeOut("slow", () => {
-                $("#sarthak").html(0);
-                $("#sarthak").fadeIn();
-            });
-            //console.log("Im back in 0");
+            //console.log("over");
+            var audio = new Audio('C:/Users/Win10/Desktop/datasets/test.wav');
+            audio.play();
             saved = true;
         }
         prev = cycle;
-    
-        //drawKeyPoints1();
 }
-
 
 // A function to draw the skeletons
 function drawSkeleton() {
