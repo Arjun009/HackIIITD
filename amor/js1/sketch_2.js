@@ -6,7 +6,6 @@ let move_count = 0;
 var prev = 0;
 let count_uni = 0;
 var saved = false;
-console.log("opop");
 
 function setup() {
     createCanvas(640, 500);
@@ -84,15 +83,14 @@ function drawKeyPoints() {
 
 
         if (move_count != prev) {
-            //console.log("move_count: " + move_count);
-            // document.getElementById("counting-id").innerHTML=move_count;
+            
             $("#counting-id").fadeOut("slow", () => {
                 $("#counting-id").html(move_count);
                 $("#counting-id").fadeIn();
             });
         }
         if (move_count == 5 && saved == false) {
-            //console.log("over");
+           
             var audio = new Audio('C:/Users/Win10/Desktop/datasets/test.wav');
             audio.play();
             saved = true;
