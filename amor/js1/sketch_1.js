@@ -6,7 +6,6 @@ let move_count = 0;
 var prev = 0;
 let count_uni = 0;
 var saved = false;
-console.log("opop");
 
 function setup() {
     createCanvas(640, 480);
@@ -45,7 +44,7 @@ function draw() {
 function drawKeyPoints(){
     
     // Loop through all the poses detected
-    console.log("Im in 1");
+    
     for (let i = 0; i < poses.length; i++) {
         // For each pose detected, loop through all the keypoints
         let pose = poses[i].pose;
@@ -84,8 +83,7 @@ function drawKeyPoints(){
 
 
         if (move_count != prev) {
-            //console.log("move_count: " + move_count);
-            // document.getElementById("counting-id").innerHTML=move_count;
+           
             $("#counting-id").fadeOut("slow", () => {
                 $("#counting-id").html(move_count);
                 $("#counting-id").fadeIn();
@@ -97,13 +95,12 @@ function drawKeyPoints(){
                 $("#counting-id").html(move_count);
                 $("#counting-id").fadeIn();
             });
-            //move_count = 0;
-            //drawKeyPoints2();
+           
             saved = true;
         }
         prev = move_count;
     
-        //drawKeyPoints2();
+      
     
 }
 
