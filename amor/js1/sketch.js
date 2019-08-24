@@ -88,8 +88,7 @@ function drawKeyPoints() {
 
         }
         if (move_count != prev) {
-            //console.log("move_count: " + move_count);
-            // document.getElementById("sarthak").innerHTML=move_count;
+           
             $("#counting-id").fadeOut("slow", () => {
                 $("#counting-id").html(move_count);
                 $("#counting-id").fadeIn();
@@ -106,7 +105,7 @@ function drawKeyPoints() {
         }
         prev = move_count;
     
-        //drawKeyPoints1();
+       
 }
 
 
