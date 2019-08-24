@@ -6,7 +6,7 @@ let move_count = 0;
 var prev = 0;
 let count_uni = 0;
 var saved = false;
-console.log("opop");
+
 
 function setup() {
     console.log(windowWidth+" "+windowHeight)
@@ -101,7 +101,7 @@ function drawKeyPoints() {
                 $("#counting-id").html(move_count);
                 $("#counting-id").fadeIn();
             });
-            //console.log("Im back in 0");
+           
             saved = true;
         }
         prev = move_count;
