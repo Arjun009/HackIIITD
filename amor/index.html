@@ -100,12 +100,12 @@
                         <li><a href="index_2.html">Exercise 3</a></li>
                     </ul>
                 </div>
-								<a href = "../breathing/index.html" class="btn btn-dark" style="margin-left: 10px;" target="__blank">Meditate</a>
+                <a href="../breathing/index.html" class="btn btn-dark" style="margin-left: 10px;" target="__blank">Meditate</a>
                 <div class="counter-flex text-center" id="counter" style="padding-top: 10px;">
                     <h1>
                         <!--                        <span style="color: white;">Excercise 1</span><br>-->
                         <div class="circle align-items-center justify-content-center">
-                            <span id="sarthak">0</span>
+                            <span id="counting-id">0</span>
                         </div>
 
                     </h1>
@@ -117,7 +117,7 @@
     </section>
     <script>
         let status = document.querySelector('#status');
-        let counter = document.querySelector('#sarthak');
+        let counter = document.querySelector('#counting-id');
         setInterval(() => {
             if (status.innerHTML === "Model Loaded") {
                 document.querySelector('canvas').style.visibility = "visible";
