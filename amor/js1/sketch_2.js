@@ -58,7 +58,7 @@ function drawKeyPoints() {
                 fill(255);
                 stroke(20);
                 strokeWeight(4);
-                ellipse(keypoint.position.x, keypoint.position.y, 10, 10);
+                ellipse(keypoint.position.x, keypoint.position.y, 8, 8);
             }
         }
     }
