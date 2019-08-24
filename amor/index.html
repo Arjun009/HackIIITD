@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Fit.ai - Excercise 1</title>
+    <link rel="icon" type="image/ico" href="./logo.ico" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- themify CSS -->
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="css/all.css">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="css/flaticon.css">
+    <!-- magnific popup CSS -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <!-- nice select CSS -->
+    <link rel="stylesheet" href="css/nice-select.css">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="css/slick.css">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!--::header part start::-->
+    <!-- Header part end-->
+    <style>
+        .loader {
+            position: absolute;
+            right: 15vw;
+            top: 5vh;
+            width: 100px;
+            height: 100px;
+            z-index: 1;
+            border-radius: 50%;
+            border-top: 5px solid violet;
+            animation: load 1s linear infinite;
+            border: 5px solid #8d00ff;
+        }
+
+        @keyframes load {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        canvas {
+            position: absolute;
+            top: 20vh;
+            right: 26vw;
+            /*box-shadow: 1px 1px 1px #000;*/
+            padding-bottom: 10px;
+            padding-top: 20px;
+
+        }
+
+        .circle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            font-size: 50px;
+            color: #000;
+            line-height: 70px;
+            text-align: center;
+            background: #fff;
+            margin-left: 67px;
+        }
+
+    </style>
+    <!-- banner part start-->
+    <section class="banner_part">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+
+                <div class="col-lg-12">
+                    <p id='status' style="display: none;">Loading model...</p>
+                </div>
+                <div style="padding-right: 500px;">
+                    <h1><a href="../index.html" style="text-decoration: none; color: white;">Fit.ai</a></h1>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown">Choose Exercise
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Exercise 1</a></li>
+                        <li><a href="index_1.html">Exercise 2</a></li>
+                        <li><a href="index_2.html">Exercise 3</a></li>
+                    </ul>
+                </div>
+								<a href = "../breathing/index.html" class="btn btn-dark" style="margin-left: 10px;" target="__blank">Meditate</a>
+                <div class="counter-flex text-center" id="counter" style="padding-top: 10px;">
+                    <h1>
+                        <!--                        <span style="color: white;">Excercise 1</span><br>-->
+                        <div class="circle align-items-center justify-content-center">
+                            <span id="sarthak">0</span>
+                        </div>
+
+                    </h1>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        let status = document.querySelector('#status');
+        let counter = document.querySelector('#sarthak');
+        setInterval(() => {
+            if (status.innerHTML === "Model Loaded") {
+                document.querySelector('canvas').style.visibility = "visible";
+                //document.querySelector('.loader').style.display = "none";
+            }
+
+            if (counter.innerHTML === "5") {
+                //document.querySelector("#counter").style.display = "none";
+                document.querySelector("#go-to-next").style.visibility = "visible";
+            }
+        }, 10);
+
+    </script>
+    <div style="padding-left: 20px">
+        <img src="img/neck.gif" alt="neck ex" width="20%" height="25%">
+    </div>
+    <div style="padding-left: 78%">
+        <a href="index_1.html" id="go-to-next" class="btn btn-primary btn-lg align-items-center justify-content-center" style="visibility: hidden;">Proceed ahead</a>
+    </div>
+    <script src="js/jquery-1.12.1.min.js"></script>
+    <!-- popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- easing js -->
+    <script src="js/jquery.magnific-popup.js"></script>
+    <!-- swiper js -->
+    <script src="js/swiper.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.smooth-scroll.min.js"></script>
+    <!-- swiper js -->
+    <script src="js/masonry.pkgd.js"></script>
+    <!-- particles js -->
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <!-- swiper js -->
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+
+    <!-- contact js -->
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/contact.js"></script>
+    <!-- custom js -->
+    <script src="js/custom.js"></script>
+    <script src="./js1/sketch.js"></script>
+    <script src="./js1/algo.js"></script>
+    <script src="js1/p5.min.js"></script>
+    <script src="js1/p5.dom.min.js"></script>
+    <script src="js1/ml5.min.js" type="text/javascript"></script>
+</body>
+
+</html>

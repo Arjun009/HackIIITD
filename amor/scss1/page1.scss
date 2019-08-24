@@ -1,0 +1,179 @@
+$red : #ff0d2d;
+$d : 0.5s;
+$d1 : 2s;
+$d1 : $d1 + $d + $d;
+$d2 : 0.3s;
+$d2 : $d2 + $d;
+$si-color : #0c0c0c;
+$eo : cubic-bezier(0.215, 0.61, 0.355, 1);
+
+.page1{
+  // display: flex;
+  position: relative;
+  width:100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.side1{
+  position: absolute;
+  top:0;
+  left: 0;
+  width:45%;
+  height: 100%;
+  float: left;
+  padding: 50px;
+  background-color: #0c0c0c;
+}
+
+.heading{
+  color: #ddd;
+  font-size: 140px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  margin-top:10vh;
+  span{
+    color: lawngreen;
+  }
+}
+
+.btn{
+  position: relative;
+  font-size: 50px;
+  width:25vw;
+  height: 13vh;
+  margin-top: 13vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+  box-shadow: 0 0 10px #000;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.3s;
+
+  &::after{
+    z-index: -1;
+    content:"";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 7%;
+    bottom:0;
+    background: #1c1c1c;
+    transition: all 0.3s;
+  }
+
+  &:hover{
+    color: lawngreen;
+    &::after{
+      height: 100%;
+    }
+  }
+}
+
+.side2{
+  width: 70%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  right: 0;
+  background-color: #111;
+  -webkit-clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.steps{
+  position: absolute;
+  top:15vh;
+  right:10vw;
+  width: 40vw;
+  height: 70vh;
+  background: $si-color;
+  box-shadow: 0 0 20px #000;
+}
+
+.activate{
+  .step{
+    width:100%;
+    height: 100%;
+    position: absolute;
+
+    .content{
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      flex-direction: column;
+      .step-heading{
+        font-size: 48px;
+      }
+      .image{
+        max-height: 60%;
+        min-height: 60%;
+      }
+    }
+  }
+  
+  .step-n{
+    animation: width0 $d $eo forwards;
+    overflow: hidden;
+    .content{
+      position: absolute;
+      top:0;
+      left:0;
+    }
+  }
+  
+  .stepi{
+    background: $si-color;
+    animation: width0 $d $eo forwards;
+  }
+  
+  .stepi4{
+    animation-delay: 4*($d1 + $d2);
+  }
+  
+  .step4{
+    background-color: #1a1a1a;
+    animation-delay: 4*$d1 + 3*$d2;
+  }
+  
+  .stepi3{
+    animation-delay: 3*($d1 + $d2);
+  }
+  
+  .step3{
+    background-color: #1a1a1a;
+    animation-delay: 3*$d1 + 2*$d2;
+  }
+  
+  .stepi2{
+    animation-delay: 2*($d1 + $d2);
+  }
+  
+  .step2{
+    background-color: #1a1a1a;
+    animation-delay: 2*$d1 + $d2;
+  }
+  
+  .stepi1{
+    animation-delay: $d1 + $d2;
+  }
+  
+  .step1{
+    background-color: #1a1a1a;
+    animation-delay: $d1;
+  }
+
+  .stepi0{
+    animation-delay: $d;
+  }
+  
+  @keyframes width0{
+    to{
+      width:0%;
+    }
+  }
+}
