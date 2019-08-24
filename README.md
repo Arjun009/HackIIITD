@@ -1,2 +1,2 @@
 # HackNSUT
-Check out it live [Here](https://expro-v1.herokuapp.com/)
+Check out it live [Here](https://arjun009.github.io/HackIIITD)
