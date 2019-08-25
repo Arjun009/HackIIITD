@@ -1,4 +1,4 @@
-Open the gievn link.
+Open the given [link](https://arjun009.github.io/HackIIITD).
 Click Proceed.
 Now you will land on a page where you will have to allow camera access to the browser.
 You will see a gif in the left corner of the page and a counter on the top right.
