@@ -31,5 +31,5 @@ correct framework was also a challenge.
 ```
 ## Technologies we used
 
-`node.js` `Firebase` `HTML/CSS`  `p5js` `TensorFlow.js` `Posenet` `javasc`
+`node.js` `HTML/CSS`  `p5js` `TensorFlow.js` `Posenet` `javasc`
 
