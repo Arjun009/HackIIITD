@@ -1,7 +1,35 @@
-Open the given [link](https://arjun009.github.io/HackIIITD).
-Click Proceed.
-Now you will land on a page where you will have to allow camera access to the browser.
-You will see a gif in the left corner of the page and a counter on the top right.
-Look into the camera and do as the gif does. Make sure ther is only one person in the vicinity of the camera.
-If you a wrap correctly, the counter increases by 1 and when the counter reaches 5, it means you have a completed the exercise.
-A button appears on the bottom right as soon as the counter reaches 5. Click on it to proceed ahead.
+# Fit.ai
+
+```
+A workout app with a personalized AI based coach to monitor
+your exercises. The platform checks appropriate posture of the
+user. It uses computer intelligence to check your performance.
+```
+**BUILT BY Nitin Singh, Gagan Talreja, Arjun Mohnot**
+
+**BUILT AT [HackIIITD](https://hackiiitd.devfolio.co/)**
+
+## Links
+[Website](https://arjun009.github.io/HackIIITD/)
+
+## The problem Fit.ai solves
+
+```
+The application can be used by people who get less time to
+exercise or mostly have a desk job. They can use it have a
+refreshing exercising sprint in a break. The app can also provide
+assistance to older people who want to do light exercises and
+can also be helpful to people going through a rehab.
+```
+## Challenges we ran into
+
+```
+Deciding the right exercises and identifying them using computer
+vision was huge task. We generated the co-ordinate data which
+was used to create conditions for various exercises. Finding the
+correct framework was also a challenge.
+```
+## Technologies we used
+
+`node.js` `Firebase` `HTML/CSS`  `p5js` `TensorFlow.js` `Posenet` `javasc`
+
