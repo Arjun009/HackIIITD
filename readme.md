@@ -1,5 +1,6 @@
 # Fit.ai
 
+View [Submission & Screenshots](https://devfolio.co/submissions/fitai)
 ```
 A workout app with a personalized AI based coach to monitor
 your exercises. The platform checks appropriate posture of the
@@ -10,7 +11,7 @@ user. It uses computer intelligence to check your performance.
 **BUILT AT [HackIIITD](https://hackiiitd.devfolio.co/)**
 
 ## Links
-[Website](https://arjun009.github.io/HackIIITD/)
+[Website-Demo](https://arjun009.github.io/HackIIITD/)
 
 ## The problem Fit.ai solves
 
